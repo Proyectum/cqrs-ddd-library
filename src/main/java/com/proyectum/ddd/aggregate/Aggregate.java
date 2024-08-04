@@ -10,7 +10,7 @@ public abstract class Aggregate<ID extends ValueObject<UUID>> {
     private ID id;
     private final List<DomainEvent> events;
 
-    private Aggregate() {
+    protected Aggregate() {
         this.events = new ArrayList<>();
     }
 
