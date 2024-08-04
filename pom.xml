@@ -2,8 +2,16 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.proyectum</groupId>
-  <artifactId>ddd-library</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <name>Archetype - ddd-library</name>
+  <artifactId>cqrs-ddd-library</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <name>CQRS - DDD - Library</name>
   <url>http://maven.apache.org</url>
+
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub Proyectum Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/proyectum</url>
+    </repository>
+  </distributionManagement>
 </project>
