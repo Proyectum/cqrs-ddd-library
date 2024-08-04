@@ -24,10 +24,10 @@ jobs:
           MAVEN_GH_TOKEN: ${{ secrets.MVN_TOKEN }}
         run: mvn clean package --settings .github/maven-settings.xml
 
-      - name: Publish to GitHub Packages
-        env:
-          MAVEN_GH_TOKEN: ${{ secrets.MVN_TOKEN }}
-        run: mvn deploy --settings .github/maven-settings.xml
+      #- name: Publish to GitHub Packages
+      #  env:
+      #    MAVEN_GH_TOKEN: ${{ secrets.MVN_TOKEN }}
+      #  run: mvn deploy --settings .github/maven-settings.xml
 
       - name: Extract version from pom.xml
         id: extract_version
@@ -37,7 +37,7 @@ jobs:
 
       - name: Create GitHub Release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MVN_TOKEN }}
         run: |
           # Create the GitHub Release
           curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
@@ -47,7 +47,7 @@ jobs:
 
       - name: Create and Push Tag
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MVN_TOKEN }}
         run: |
           # Configure Git
           git config user.name "github-actions"
