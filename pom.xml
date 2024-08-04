@@ -11,7 +11,7 @@
     <repository>
       <id>github</id>
       <name>GitHub Proyectum Apache Maven Packages</name>
-      <url>https://maven.pkg.github.com/proyectum</url>
+      <url>https://maven.pkg.github.com/proyectum/cqrs-ddd-library</url>
     </repository>
   </distributionManagement>
 </project>
